@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Starting Build Stage...'
+                echo 'Starting Build Staage...'
                 bat 'echo Building the project...'
             }
         }
