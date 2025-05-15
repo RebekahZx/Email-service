@@ -18,10 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Starting Test Stage...'
-                bat '''
-                    echo Running tests...
-                    timeout /t 2
-                '''
+               
             }
             post {
                 success {
