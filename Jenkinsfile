@@ -8,15 +8,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Starting Build Staage...'
-                bat 'echo Building the project...'
+                echo 'Starting Build Stage...'
+                bat '''
+                    echo Building the project...
+                '''
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Starting Test Stage...'
-                bat 'echo Running tests... && timeout /t 2'
+                bat '''
+                    echo Running tests...
+                    timeout /t 2
+                '''
             }
             post {
                 success {
@@ -41,7 +46,10 @@ pipeline {
         stage('Security Scan') {
             steps {
                 echo 'Starting Security Scan Stage...'
-                bat 'echo Scanning for vulnerabilities... && timeout /t 2'
+                bat '''
+                    echo Scanning for vulnerabilities...
+                    timeout /t 2
+                '''
             }
             post {
                 success {
@@ -66,7 +74,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Starting Deployment Stage...'
-                bat 'echo Deploying application...'
+                bat '''
+                    echo Deploying application...
+                '''
             }
         }
     }
