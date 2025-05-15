@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Starting Test Stage JUnit / NUnit / Selenium / Jest / Mocha...'
+                echo 'Starting Test Stage JUnit / NUnit / Selenium / Jest / Mocha..'
                
             }
             post {
