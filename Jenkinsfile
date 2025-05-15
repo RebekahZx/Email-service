@@ -45,7 +45,7 @@ pipeline {
                 echo 'Starting Security Scan Stage. SonarQube / OWASP Dependency-Check / Snyk..'
                 bat '''
                     echo Scanning for vulnerabilities...
-                    timeout /t 2
+                    
                 '''
             }
             post {
